@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Doctor's Office</title>
+  </head>
+  <body>
+      <h3>Doctor: {{ result.name }}</h3>
+      <form action="/addpatient" method="get">
+        <label for="patientname">Add a patient</label>
+        <input type="text" name="patientname">
+        <label for="patientbirthdate">Enter the DOB</label>
+        <input type="text" name="patientbirthdate">
+        <input type="hidden" name="doctor_id" value="{{ result.id }}">
+        <button type="submit">Enter</button>
+      </form>
+    <p><a href="/">Home</a></p>
+  </body>
+</html>

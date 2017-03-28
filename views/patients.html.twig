@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Patients Page</title>
+  </head>
+  <body>
+    <h3>{{ doctor.name }} here are all your patients</h3>
+  {% for patient in patients %}
+    <li><a href="/patient/{{ patient.id }}">{{ patient.name }}</a></li>
+    <br>
+  {% endfor %}
+
+  </body>
+</html>
